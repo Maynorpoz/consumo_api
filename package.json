@@ -1,7 +1,7 @@
 {
   "name": "consumo_api",
   "version": "1.0.0",
-  "description": "Formulario accesible + consumo de API publica con estados de interfaz (TypeScript)",
+  "description": "Datos curiosos de gatos: formulario accesible + consumo de la API Cat Facts con estados de interfaz (TypeScript)",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w"
