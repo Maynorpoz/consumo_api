@@ -1,0 +1,24 @@
+{
+  "name": "consumo_api",
+  "version": "1.0.0",
+  "description": "Formulario accesible + consumo de API publica con estados de interfaz (TypeScript)",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maynorpoz/consumo_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Maynorpoz/consumo_api/issues"
+  },
+  "homepage": "https://github.com/Maynorpoz/consumo_api#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
