@@ -1,10 +1,9 @@
 {
   "name": "consumo_api",
   "version": "1.0.0",
-  "description": "Datos curiosos de gatos: formulario accesible + consumo de la API Cat Facts con estados de interfaz (TypeScript)",
+  "description": "",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/Maynorpoz/consumo_api/issues"
   },
-  "homepage": "https://github.com/Maynorpoz/consumo_api#readme",
-  "devDependencies": {
-    "typescript": "^7.0.2"
-  }
+  "homepage": "https://github.com/Maynorpoz/consumo_api#readme"
 }
