@@ -1,1 +1,230 @@
-/* Estilos de la aplicación. */
+/* ===== Base ===== */
+:root {
+  --color-fondo: #f4f6f8;
+  --color-superficie: #ffffff;
+  --color-texto: #1c2733;
+  --color-texto-suave: #55606b;
+  --color-borde: #c9d2db;
+  --color-primario: #1d6fa5;
+  --color-primario-hover: #17587f;
+  --color-error: #b3261e;
+  --color-exito: #1c7c3c;
+  --radio: 8px;
+  --espacio: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+/* ===== Layout ===== */
+header,
+main,
+footer {
+  max-width: 720px;
+  margin-inline: auto;
+  padding-inline: var(--espacio);
+}
+
+header {
+  padding-block: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+}
+
+header p {
+  margin: 0;
+  color: var(--color-texto-suave);
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 1rem;
+}
+
+section {
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.25rem;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+footer {
+  padding-block: 1.5rem 2.5rem;
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
+
+/* ===== Formulario ===== */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 0.25rem;
+}
+
+.campo {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.campo label {
+  font-weight: 600;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  font: inherit;
+  color: inherit;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.ayuda {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+}
+
+.error-campo {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-error);
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+.error-campo:empty {
+  display: none;
+}
+
+/* Marca visual cuando la validación nativa falla tras un envío */
+.campo input:user-invalid,
+.campo select:user-invalid {
+  border-color: var(--color-error);
+}
+
+button {
+  justify-self: start;
+  padding: 0.6rem 1.4rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primario);
+  border: none;
+  border-radius: var(--radio);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--color-primario-hover);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* ===== Foco visible (accesibilidad) ===== */
+:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+/* ===== Zona de resultados ===== */
+#estado {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radio);
+  background: var(--color-fondo);
+  color: var(--color-texto-suave);
+}
+
+#estado[data-estado="cargando"] {
+  color: var(--color-primario);
+}
+
+#estado[data-estado="error"] {
+  background: #fbe9e7;
+  color: var(--color-error);
+}
+
+#estado[data-estado="exito"] {
+  color: var(--color-exito);
+}
+
+#resultados {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+#resultados li {
+  padding: 0.85rem 1rem;
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+#resultados li h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+#resultados li p {
+  margin: 0;
+}
+
+#resultados:empty {
+  display: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.35rem;
+  }
+
+  button {
+    justify-self: stretch;
+    text-align: center;
+  }
+}
+
+/* ===== Preferencia de movimiento reducido ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
