@@ -1,15 +1,17 @@
 /* ===== Base ===== */
 :root {
-  --color-fondo: #f4f6f8;
-  --color-superficie: #ffffff;
-  --color-texto: #1c2733;
-  --color-texto-suave: #55606b;
-  --color-borde: #c9d2db;
-  --color-primario: #1d6fa5;
-  --color-primario-hover: #17587f;
-  --color-error: #b3261e;
-  --color-exito: #1c7c3c;
-  --radio: 8px;
+  --color-fondo: #cccbbb;
+  --color-superficie: #fffdf9;
+  --color-panel: #c6c4c0;
+  --color-texto: #63788e;
+  --color-texto-suave: #7a6a5b;
+  --color-borde: #e2d5c0;
+  --color-primario: #a85632;
+  --color-primario-hover: #8a4426;
+  --color-error: #a5342a;
+  --color-error-suave: #f4dfd9;
+  --color-exito: #4a7239;
+  --radio: 10px;
   --espacio: 1rem;
 }
 
@@ -42,6 +44,7 @@ header {
 header h1 {
   margin: 0 0 0.25rem;
   font-size: 1.6rem;
+  color: var(--color-primario);
 }
 
 header p {
@@ -65,6 +68,7 @@ section {
 section h2 {
   margin-top: 0;
   font-size: 1.2rem;
+  color: var(--color-primario);
 }
 
 footer {
@@ -164,8 +168,8 @@ button:disabled {
   margin: 0 0 1rem;
   padding: 0.75rem 1rem;
   border-radius: var(--radio);
-  background: var(--color-fondo);
-  color: var(--color-texto-suave);
+  background: var(--color-panel);
+  color: var(--color-texto);
 }
 
 #estado[data-estado="cargando"] {
@@ -173,7 +177,7 @@ button:disabled {
 }
 
 #estado[data-estado="error"] {
-  background: #fbe9e7;
+  background: var(--color-error-suave);
   color: var(--color-error);
 }
 
@@ -191,7 +195,7 @@ button:disabled {
 
 #resultados li {
   padding: 0.85rem 1rem;
-  background: var(--color-fondo);
+  background: var(--color-panel);
   border: 1px solid var(--color-borde);
   border-radius: var(--radio);
 }
@@ -199,6 +203,7 @@ button:disabled {
 #resultados li h3 {
   margin: 0 0 0.35rem;
   font-size: 1rem;
+  color: var(--color-primario);
 }
 
 #resultados li p {
