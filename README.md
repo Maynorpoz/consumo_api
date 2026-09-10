@@ -120,8 +120,3 @@ Detalles de comportamiento:
 - **Seguridad en el DOM:** los datos externos se insertan únicamente con
   `textContent` y `document.createElement`; no se usa `innerHTML` con contenido
   no confiable.
-
-## Evidencias
-
-Las capturas del formulario, los resultados y la solicitud HTTP se encuentran en
-la carpeta [`docs/`](docs/). *(Pendiente de añadir.)*
